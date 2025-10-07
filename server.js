@@ -12,6 +12,7 @@ import classRoutes from "./routes/classRoutes.js";
 import taskRoutes from "./routes/taskRoutes.js";
 import resourceRoutes from "./routes/resourceRoutes.js";
 import flashCardRoutes from "./routes/flashCardRoutes.js";
+import eventRoutes from './routes/eventRoutes.js';
 
 dotenv.config();
 const app = express();
@@ -127,7 +128,8 @@ app.use("/class", classRoutes);
 app.use("/task", taskRoutes);
 app.use("/resources", resourceRoutes);
 app.use("/flashcard", flashCardRoutes);
+app.use('/event', eventRoutes);
 
-http.listen(3000, () => {
+http.listen(PORT, () => {
   console.log("RTT server running at http://localhost:3000");
 });
